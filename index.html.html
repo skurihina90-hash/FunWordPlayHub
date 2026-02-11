@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoloLingo — полезные словечки</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #ff6ec7;
+    --violet: #b44cff;
+    --deep-violet: #8a2be2;
+    --glass: rgba(255, 255, 255, 0.85);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+                url("fonwall.ru-nature-field-flowers.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== ХЕДЕР ===== */
+header {
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    padding: 20px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.site-title {
+    font-family: 'Baloo 2', cursive;
+    font-size: 3rem;
+    margin: 10px 0;
+    background: linear-gradient(90deg, var(--pink), var(--violet), var(--deep-violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(180, 76, 255, 0.6);
+    letter-spacing: 2px;
+}
+
+/* ===== МЕНЮ ===== */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    color: var(--deep-violet);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+/* ===== ОСНОВНАЯ КАРТОЧКА ===== */
+.main-card {
+    margin-top: 40px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.main-card h2 {
+    color: var(--deep-violet);
+}
+
+.main-card p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* ===== КНОПКИ ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.lang-btn {
+    background: white;
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.lang-btn:hover {
+    background: linear-gradient(90deg, var(--pink), var(--violet));
+    color: white;
+    transform: translateY(-5px);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1 class="site-title">SoloLingo – полезные словечки</h1>
+
+    <nav>
+        <a href="#">Регистрация</a>
+        <a href="#">Личный кабинет</a>
+        <a href="#">Новости</a>
+        <a href="#">Карта сайта</a>
+    </nav>
+</header>
+
+<div class="main-card">
+    <h2>Выберите язык для изучения</h2>
+    <p>Нажмите на язык, чтобы начать тренажер.</p>
+
+    <div class="grid">
+        <button class="lang-btn" onclick="window.location.href='trainer.html?lang=RU'">🇷🇺 Русский</button>
+        <button class="lang-btn" onclick="window.location.href='trainer.html?lang=EN'">🇺🇸 English</button>
+        <button class="lang-btn" onclick="window.location.href='trainer.html?lang=GE'">🇬🇪 Georgian</button>
+        <button class="lang-btn" onclick="window.location.href='trainer.html?lang=KZ'">🇰🇿 Kazakh</button>
+    </div>
+</div>
+
+</body>
+</html>
